@@ -6,6 +6,12 @@ FitLens AI is an evidence-grounded creator-selection copilot developed for the *
 
 The product helps marketers move from a large creator universe to an explainable shortlist by combining campaign context, creator evidence, structured fit analysis, and human decision-making.
 
+## Live Prototype
+
+🚀 [Launch the FitLens AI Prototype](https://ai.studio/apps/31878931-2f59-41e3-a73e-bfd398fd1ddb)
+
+Explore the interactive FitLens AI prototype, from campaign setup and creator discovery to Campaign DNA, Creator DNA × Campaign DNA analysis, evidence-backed evaluation, and human decision support.
+
 > **Find the shortlist. Then make the fit visible.**
 
 **Project Type:** Hackathon Product Prototype  
