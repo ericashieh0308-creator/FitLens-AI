@@ -4,9 +4,14 @@
 
 FitLens AI is an evidence-grounded creator-selection copilot developed for the **NYU SPS × Google Hackathon**.
 
-The product is designed to help marketers move from a large creator universe to a smaller, explainable shortlist by combining campaign context, creator evidence, structured fit analysis, and human decision-making.
+The product helps marketers move from a large creator universe to an explainable shortlist by combining campaign context, creator evidence, structured fit analysis, and human decision-making.
 
 > **Find the shortlist. Then make the fit visible.**
+
+**Project Type:** Hackathon Product Prototype  
+**Focus:** AI Product Strategy | Creator Marketing | Decision Support  
+**AI Layer:** Google AI / Gemini  
+**Role of AI:** Content understanding, evidence extraction, fit reasoning, and creative translation
 
 ---
 
@@ -14,37 +19,43 @@ The product is designed to help marketers move from a large creator universe to 
 
 Creator selection can be slow, fragmented, and difficult to explain.
 
-Marketing teams often need to:
+Marketing teams often move between creator discovery, manual content review, fit assessment, creative ideation, and internal approval using separate tools and subjective evaluation criteria.
 
-1. Search a large creator universe
-2. Review creator content manually
-3. Compare candidates across spreadsheets and notes
-4. Evaluate creative compatibility
-5. Develop campaign ideas
-6. Reassemble evidence for internal decision-makers
+This creates several challenges:
 
-This creates a workflow where evidence becomes scattered, evaluation criteria may vary across reviewers, and the reasoning behind a creator recommendation can be difficult to audit.
+- High manual discovery and review effort
+- Inconsistent evaluation criteria
+- Scattered evidence across tools and notes
+- Difficulty explaining why a creator fits a specific campaign
+- Separation between creator selection and creative strategy
+
+FitLens was designed to compress this workflow without hiding the evidence or replacing marketer judgment.
 
 ---
 
-## Product Strategy
+# Product Strategy
 
-FitLens was designed around three questions marketers need to answer:
+FitLens is structured around three decision questions:
 
 ### 1. Who should we look at?
-Reduce the search space through campaign-specific screening and creator discovery.
+
+Reduce a large creator pool through campaign-specific discovery and screening.
 
 ### 2. Why does this creator fit?
-Compare **Creator DNA × Campaign DNA** to make alignment, gaps, and supporting evidence visible.
+
+Compare **Creator DNA × Campaign DNA** to make alignment, gaps, evidence, and creative opportunities visible.
 
 ### 3. Who should we move forward with?
-Compare finalists, understand trade-offs, and support the marketer's final decision.
 
-FitLens does not replace the marketer's judgment. It uses AI to make the decision process faster, clearer, and more explainable.
+Compare finalists and their trade-offs while keeping the final partnership decision with the marketer.
+
+![FitLens Product Workflow](visuals/product_workflow.png)
+
+The goal is not to let AI choose a creator. The goal is to make a complex creator-selection decision **faster, clearer, and more explainable**.
 
 ---
 
-## Core Product Workflow
+# Core Product Workflow
 
 **Campaign Context**  
 ↓  
@@ -64,80 +75,230 @@ FitLens does not replace the marketer's judgment. It uses AI to make the decisio
 
 ---
 
-## Key Product Features
+# Campaign DNA
 
-### Campaign Setup
-Captures product/category, campaign goal, target audience, and target market before creator evaluation begins.
+Before evaluating creators, marketers define what "fit" means for the specific campaign.
 
-### Transparent Creator Discovery
-Shows active filters, AI-suggested creators, team-added candidates, and the logic used to narrow the creator pool.
+FitLens allows marketers to adjust the relative importance of six evaluation dimensions rather than relying on one universal scoring model.
 
-### Campaign DNA
-Allows marketers to define the relative importance of six fit dimensions before creators are scored.
+![Campaign DNA](visuals/campaign_dna.png)
 
-### FitLens Profile
-Compares Creator DNA with Campaign DNA using:
+The Campaign DNA interface includes:
 
-- Overall Campaign Fit
-- DNA Spider Map
-- Fit Evaluation Summary
-- Dimension-Level Breakdown
+- Adjustable fit weights
+- Campaign DNA spider-map preview
+- Transparent scoring logic
+- 100% weight-balance check
 
-### Evidence-Backed Analysis
-Connects fit assessments to inspectable creator evidence, including specific content references and examples.
+This separates two concepts:
 
-### Creative Translation
-Translates creator–campaign fit into potential campaign angles, hooks, calls-to-action, and supporting audience-response signals.
+**Weight = how important the dimension is to the campaign.**  
+**Score = how strongly the creator demonstrates that fit.**
 
-### Side-by-Side Comparison
-Allows marketers to compare finalists using the same campaign-specific criteria while keeping strengths, gaps, and brand-safety considerations visible.
-
-### Human Decision Layer
-Preserves marketer notes, approval controls, and decision context so AI supports—but does not own—the final creator partnership decision.
+This makes the evaluation criteria explicit before a creator is judged.
 
 ---
 
-## How AI Supports the Workflow
+# Creator DNA × Campaign DNA
 
-FitLens uses Google AI / Gemini as a reasoning layer for:
+The FitLens Profile is the core product experience.
 
-- Content understanding
-- Evidence extraction
-- Creator × campaign reasoning
-- Creative translation
-- Structured comparison summaries
+It compares what the campaign requires with what the creator's public content demonstrates.
 
-The system combines campaign context and public creator evidence with AI-assisted reasoning while keeping supporting evidence and human controls visible.
+![FitLens Profile](visuals/fitlens_profile.png)
+
+The profile includes:
+
+### Overall Campaign Fit
+Provides a quick summary without replacing the underlying evidence.
+
+### DNA Spider Map
+Overlays Creator DNA and Campaign DNA to make alignment and gaps immediately visible.
+
+### Fit Evaluation Summary
+Explains why the creator appears compatible with the campaign and surfaces areas that may require additional review.
+
+### Dimension Breakdown
+Allows marketers to inspect individual dimensions instead of relying only on one overall score.
+
+The question FitLens is designed to answer is:
+
+> **How does this creator fit this specific campaign?**
 
 ---
 
-## Responsible AI Principles
+# Evidence-Backed Analysis
 
-FitLens is designed around a human-in-the-loop approach.
+FitLens is designed so that AI-generated judgments remain inspectable.
 
-- AI recommendations remain inspectable
-- Supporting evidence stays visible
-- Audience demographics are not invented when unavailable
-- Public comments are treated as supporting signals rather than complete audience representations
-- Fit scores describe creator–campaign alignment, not guaranteed campaign success
-- Commercial considerations such as fees, negotiation, exclusivity, and final approval remain human decisions
+For each fit dimension, the system can connect an assessment to:
+
+- Dimension score
+- Evidence statement
+- Referenced public creator content
+- Specific examples or timestamps
+
+The principle is:
+
+> **Explainability = score + reason + inspectable evidence.**
+
+This reduces the need for marketers to accept an unexplained AI recommendation.
 
 ---
 
-## Prototype Validation
+# Creative Translation
 
-The prototype could be evaluated using:
+FitLens goes beyond creator scoring by translating creator–campaign fit into a potential activation concept.
 
+The prototype can generate:
+
+- Suggested creative angle
+- Suggested hook
+- Call-to-action
+- Supporting public audience-response signals
+
+These outputs are intended as decision support and creative starting points—not automatically approved campaign concepts.
+
+---
+
+# Human-Centered Decision Support
+
+The final stage brings the analysis back to the marketer.
+
+![FitLens Decision Support](visuals/decision_support.png)
+
+The decision layer includes:
+
+- Human authority controls
+- Candidate summaries
+- Strengths and watch items
+- Marketer notes
+- Explicit final selection
+
+FitLens does not autonomously approve, contact, book, or contract creators.
+
+**AI informs the partnership decision. The marketer owns it.**
+
+---
+
+# How FitLens Uses AI
+
+The prototype uses **Google AI / Gemini** as a reasoning layer.
+
+### Inputs
+
+- Campaign brief
+- Product/category
+- Campaign goal
+- Target audience
+- Target market
+- Optional campaign requirements
+- Recent public creator content
+- Public metadata
+- Observable content patterns
+- Supporting public comment signals
+- Human-entered context
+
+### AI Reasoning
+
+Google AI / Gemini supports:
+
+1. **Content Understanding**  
+   Identifying topics, formats, tone, and observable creator patterns.
+
+2. **Evidence Extraction**  
+   Connecting fit judgments to specific content signals.
+
+3. **Creator × Campaign Reasoning**  
+   Evaluating creators against the same Campaign DNA framework.
+
+4. **Creative Translation**  
+   Turning fit patterns into potential campaign angles, hooks, and calls-to-action.
+
+5. **Structured Summaries**  
+   Generating concise strengths, gaps, and comparison-ready explanations.
+
+### Outputs
+
+- Creator pool
+- FitLens analysis
+- Evidence-backed fit assessment
+- Creator comparison
+- Human decision support
+
+---
+
+# Responsible AI & Product Guardrails
+
+FitLens was designed with several important limitations and guardrails.
+
+### Audience Data
+The system should not invent precise audience demographics when direct audience data is unavailable.
+
+### Public Comments
+Comment themes can provide supporting signals but should not be treated as a complete representation of a creator's audience.
+
+### Fit ≠ Campaign Success
+Fit scores describe creator–campaign alignment.
+
+They do **not** predict:
+
+- Views
+- Sales
+- Conversions
+- ROI
+
+### Evidence Freshness
+Creator content changes over time, so recent-content weighting and timestamps matter.
+
+### Human Commercial Context
+Factors such as fees, negotiation, relationship history, exclusivity, and approvals remain human inputs.
+
+---
+
+# Prototype Validation
+
+Rather than claiming untested campaign-success improvements, the prototype proposes measurable validation criteria.
+
+### Efficiency
 - Time to qualified shortlist
-- Time required to review one creator
+- Time to review one creator
+
+### Quality
 - Evidence traceability
 - Human reviewer agreement
+
+### Usability
 - Decision clarity
 
-The goal is not to claim that FitLens guarantees campaign success, but to test whether it can make creator evaluation faster, more evidence-based, and easier to explain.
+A proposed validation test would give marketers the same campaign and creator set **with and without FitLens**, then compare review time, evidence quality, and decision confidence.
+
+The success criterion is:
+
+> **Faster review + more inspectable reasoning + clearer trade-offs, while the final partnership decision remains human.**
 
 ---
 
-## Skills Demonstrated
+# Business Model & Scale
 
-`AI Product Strategy` `Product Design` `Business Analysis` `Decision Support` `Human-Centered AI` `Responsible AI` `Creator Marketing` `Product Prototyping` `Google AI` `Gemini`
+The product concept also explores two potential usage levels:
+
+### FitLens Starter
+Designed for individual marketers and smaller campaigns with access to the core creator-analysis workflow.
+
+### FitLens Pro
+Designed for brands, agencies, and larger creator programs requiring broader discovery, more creator analysis, additional saved campaigns, and greater comparison capacity.
+
+The proposed paid model expands workflow capacity rather than changing the quality of the underlying FitLens analysis.
+
+---
+
+# Full Product Walkthrough
+
+📄 [View the Complete FitLens AI Product Walkthrough](presentation/FitLens_AI_Product_Walkthrough.pdf)
+
+---
+
+# Skills Demonstrated
+
+`AI Product Strategy` `Product Design` `Business Analysis` `Creator Marketing` `Decision Support` `Human-Centered AI` `Responsible AI` `Product Prototyping` `Explainable AI` `Google AI` `Gemini`
